@@ -5,8 +5,9 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [
-tool.pytest.ini_options
+tool.pytest
 ]
-pythonpath = [
-    "."
-]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v"
+pythonpath = ["."]
